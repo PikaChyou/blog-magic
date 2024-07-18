@@ -1,0 +1,27 @@
+{
+  "title": "Hello",
+  "description": "something need to change",
+  "author": "Qv2zzz",
+
+  "menu": [
+    {
+      "name": "home",
+      "path": "/"
+    },
+    {
+      "name": "archive",
+      "path": "/archive"
+    },
+    {
+      "name": "categories",
+      "path": "/categories"
+    },
+    {
+      "name": "about",
+      "path": "/about"
+    }
+  ],
+
+  "to_top": true,
+  "dark_mode": false
+}

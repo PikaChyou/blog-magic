@@ -1,0 +1,43 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--bg-c);
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.content {
+  min-height: 100vh;
+  padding: 1.5rem;
+  width: 75%;
+  /* box-shadow: 0 8px 6px 6px #f7f7f7; */
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.archive {
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+}

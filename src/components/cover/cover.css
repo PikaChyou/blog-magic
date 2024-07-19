@@ -16,18 +16,6 @@
   transform: scale3d(1.05, 1.05, 1);
 }
 
-.cover-title {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  color: #fdfdfd;
-  text-shadow: 1px 3px 8px rgba(0, 0, 0, 0.75);
-  font-size: 36px;
-  text-align: center;
-  z-index: -1;
-}
-
 .wave-container {
   position: absolute;
   bottom: 0;

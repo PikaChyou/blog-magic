@@ -7,12 +7,7 @@
 
         <img src="/hoshino.jpg" alt="cover" class="cover-bg cover-blur">
 
-        <div class="cover-title">
-            <slot>
-                <h1>{{ title }}</h1>
-                <p>{{ description }}</p>
-            </slot>
-        </div>
+        <slot></slot>
 
         <div class="wave-container">
             <svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -31,7 +26,7 @@
         </div>
 
         <Transition>
-            <button class="btn-toTop flex-c" v-show="!scrollShow && settings.to_top" :style="btnStyle"
+            <button class="btn-toTop flex-c" v-show="!scrollShow" :v-if="settings.to_top" :style="btnStyle"
                 @mousedown="startDrag">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <path fill="none" stroke-width="1.5"
@@ -45,14 +40,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import Header from '@/components/Header.vue'
-import Menu from '@/components/Menu.vue'
-import '@/components/cover.css'
-import settings from '@/settings.json'
 import scrollToTop from '@/components/scroll.js'
-
-const title = settings.title
-const description = settings.description
+import Header from '@/components/cover/Header.vue'
+import Menu from '@/components/Menu.vue'
+import '@/components/cover/cover.css'
+import settings from '@/settings.json'
 
 const scrollY = ref(0)
 
@@ -135,4 +127,4 @@ function stopDrag() {
 .btn-toTop>svg path {
     stroke: var(--dark-c-2);
 }
-</style>
+</style>@/components/cover/scroll.js@/components/scroll.js

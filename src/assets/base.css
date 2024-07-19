@@ -9,7 +9,7 @@ body {
   line-height: 2;
   user-select: none;
 
-  --trans-time: 0.35s;
+  --trans-time: 1.5s;
 }
 
 body::-webkit-scrollbar {

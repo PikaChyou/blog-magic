@@ -46,11 +46,13 @@ export default function (options) {
       if (id.endsWith(".md")) {
         const { data, content } = matter(src);
 
-        const front =
-          Object.keys(data).length > 0
-            ? JSON.stringify(await parseMatter(data))
-            : JSON.stringify("");
-        const words = JSON.stringify(countWords(content));
+        const front_matter = JSON.stringify({
+          title: data.title,
+          date: data.date,
+          categories: data.categories,
+          words: countWords(content),
+        });
+
         const main = JSON.stringify(await parseMarkdown(content));
         return {
           code: `import {h, defineComponent} from "vue";
@@ -61,11 +63,12 @@ export default function (options) {
                 article.render =() => {
                     return h("div", {
                       id: "write",
-                      innerHTML: ${front}+${words}+${main}
+                      innerHTML: ${main}
                     })
                 };
 
-                export default article`,
+                export default article
+                export const matter = ${front_matter}`,
           map: null,
         };
       }

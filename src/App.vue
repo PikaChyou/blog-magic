@@ -27,7 +27,7 @@ import Footer from '@/components/Footer.vue'
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity var(--trans-time) ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .v-enter-from,

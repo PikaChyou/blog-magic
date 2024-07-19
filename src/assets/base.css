@@ -29,6 +29,8 @@ body::-webkit-scrollbar {
   --dark-c-2: #666;
   --dark-c-3: #999;
 
+  --moon-c: #ffffff80;
+
   color: #000000b3;
 }
 
@@ -41,6 +43,8 @@ body::-webkit-scrollbar {
   --dark-c-1: #fdfdfd;
   --dark-c-2: #f8f8f8;
   --dark-c-3: #f0f0f0;
+
+  --moon-c: #ffffff;
 
   color: #ffffffb3;
 }

@@ -1,7 +1,7 @@
 .main {
   min-height: 100vh;
   background-color: var(--bg-c);
-  transition-duration: 0.5s;
+  transition-duration: var(--trans-time);
   user-select: text;
 }
 

@@ -96,7 +96,7 @@ const switchMode = () => {
     cursor: pointer;
     fill: var(--moon-c);
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    transition-duration: 0.5s;
+    transition-duration: var(--trans-time);
 }
 
 @media screen and (max-width: 1200px) {

@@ -8,6 +8,8 @@ body {
   height: 100%;
   line-height: 2;
   user-select: none;
+
+  --trans-time: 0.35s;
 }
 
 body::-webkit-scrollbar {

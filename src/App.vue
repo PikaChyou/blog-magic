@@ -27,7 +27,7 @@ import Footer from '@/components/Footer.vue'
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity var(--trans-time) ease-in-out;
 }
 
 .v-enter-from,
@@ -37,3 +37,4 @@ import Footer from '@/components/Footer.vue'
 </style>
 
 <style src="@/phycat.css"></style>
+<style src="katex/dist/katex.min.css"></style>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "katex": "^0.16.11",
     "marked": "^13.0.2",
     "vue": "^3.4.29",

@@ -15,7 +15,7 @@
 
 /* 字体引入：鸿蒙字体 */
 
-@font-face {
+/* @font-face {
   font-family: "HarmonyOS_Sans_SC";
   font-weight: normal;
   font-style: normal;
@@ -27,7 +27,7 @@
   font-weight: bold;
   font-style: normal;
   src: url("phycat/HarmonyOS_Sans_SC_Bold.woff");
-}
+} */
 
 html {
   font-size: 16px;
@@ -65,8 +65,8 @@ html {
 
 #write p {
   margin: 10px 10px;
-  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
-    "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
+    "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
 
   font-size: 1rem;
   word-spacing: 2px;
@@ -468,6 +468,13 @@ li.md-list-item {
   border-right: 1px solid #9d9d9d52;
   background: inherit;
   white-space: nowrap;
+}
+
+pre {
+  background-color: #666;
+  color: #fdfdfd;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
 }
 
 pre.CodeMirror-line {

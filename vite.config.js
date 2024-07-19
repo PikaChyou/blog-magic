@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from "node:url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import markdownToHtml from "./markdownToHtml";
+import markdownToHtml from "./utils/markdownToHtml";
 
 // https://vitejs.dev/config/
 export default defineConfig({

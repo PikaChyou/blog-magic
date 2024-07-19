@@ -42,7 +42,7 @@
 
 .wave > use {
   animation: wave 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-  transition-duration: 0.5s;
+  transition-duration: var(--trans-time);
 }
 
 .wave > use:nth-child(1) {

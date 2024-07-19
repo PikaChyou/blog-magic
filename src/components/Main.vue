@@ -2,6 +2,7 @@
     <div class="main">
         <div class="main-container">
             <div class="content">
+                <p @click="$router.back()"> &lt;-返回 </p>
                 <slot>nothing</slot>
             </div>
             <Sidebar v-show="isWideScreen">

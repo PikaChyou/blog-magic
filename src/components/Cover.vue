@@ -8,8 +8,10 @@
         <img src="/hoshino.jpg" alt="cover" class="cover-bg cover-blur">
 
         <div class="cover-title">
-            <h1>{{ title }}</h1>
-            <p>{{ description }}</p>
+            <slot>
+                <h1>{{ title }}</h1>
+                <p>{{ description }}</p>
+            </slot>
         </div>
 
         <div class="wave-container">

@@ -4,26 +4,26 @@ import Archive from "@/views/Archive.vue";
 
 const files = import.meta.glob("@/docs/*.md");
 
-// 生成路由
-const posts = Object.keys(files).map((path) => {
-  const name = path.replace("/src/docs/", "").replace(".md", "");
-  return {
-    path: `/${name}`,
-    component: files[path],
-  };
-});
-
-// 生成目录
-const catalogue = await Promise.all(
+const data = await Promise.all(
   Object.keys(files).map(async (path) => {
     const module = await files[path]();
     const name = path.replace("/src/docs/", "").replace(".md", "");
     return {
       path: `/${name}`,
+      component: files[path],
+      meta: {
+        info: module.matter,
+      },
       ...module.matter,
     };
   })
 );
+
+const posts = data.map((item) => {
+  return { path: item.path, component: item.component, meta: item.meta };
+});
+
+const catalogue = data.map(({ component, meta, ...rest }) => rest);
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -1,7 +1,9 @@
 <template>
 
 
-  <Cover />
+  <Cover>
+
+  </Cover>
 
   <Main>
 

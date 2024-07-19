@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/Home.vue";
-import About from "@/views/About.vue";
 import Categories from "@/views/Categories.vue";
 import Archive from "@/views/Archive.vue";
 
@@ -30,7 +28,7 @@ const router = createRouter({
     },
     {
       path: "/about",
-      component: About,
+      component: () => import("@/about.md"),
     },
     ...posts,
   ],

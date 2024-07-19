@@ -30,18 +30,18 @@ export default function (options) {
         const html = await parseMarkdown(src);
         return {
           code: `import {h, defineComponent} from "vue";
-                const _sfc_md = defineComponent({
+                const article = defineComponent({
                     name: "Markdown",
                 });
 
-                const _sfc_render =() => {
+                article.render =() => {
                     return h("div", {
-                      innerHTML: ${JSON.stringify(html)}, 
+                      id: "write",
+                      innerHTML: ${JSON.stringify(html)}
                     })
                 };
 
-                _sfc_md.render = _sfc_render
-                export default _sfc_md`,
+                export default article`,
           map: null,
         };
       }

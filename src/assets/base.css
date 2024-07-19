@@ -48,6 +48,7 @@ body::-webkit-scrollbar {
 }
 
 .footer {
+  min-height: 10vh;
   text-align: center;
   background-color: var(--bg-c);
 }

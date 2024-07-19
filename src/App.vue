@@ -25,6 +25,8 @@ import Footer from '@/components/Footer.vue'
 </script>
 
 <style>
+@import 'phycat.css';
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease-in-out;

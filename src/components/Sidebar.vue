@@ -25,18 +25,18 @@ const description = settings.description
     height: 10rem;
     margin: 0 auto;
     border-radius: 50%;
-    background-image: url("../img/ktn.jpg");
+    background-image: url("/ktn.jpg");
     background-size: cover;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: rotate 10s linear infinite;
+    /* animation: rotate 10s linear infinite; */
 }
 
-.avatar:hover {
+/* .avatar:hover {
     animation-play-state: paused;
-}
+} */
 
-@keyframes rotate {
+/* @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
@@ -44,7 +44,7 @@ const description = settings.description
     100% {
         transform: rotate(360deg);
     }
-}
+} */
 
 .sidebar {
     position: sticky;

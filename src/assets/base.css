@@ -7,12 +7,16 @@
 body {
   height: 100%;
   line-height: 2;
-
-  --shadow-c: ;
+  user-select: none;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+::selection {
+  color: var(--bg-c);
+  background-color: var(--dark-c-3);
 }
 
 .light-mode {

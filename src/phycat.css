@@ -57,7 +57,6 @@ html {
   margin: 0 auto;
   padding: 15px;
   line-height: 2.25;
-  color: #000;
   letter-spacing: 1.1px;
   word-break: break-word;
   word-wrap: break-word;
@@ -65,7 +64,6 @@ html {
 }
 
 #write p {
-  color: #333;
   margin: 10px 10px;
   font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
     "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -104,7 +102,6 @@ h6:after {
   font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
-  color: #000;
   border-bottom: none;
 }
 
@@ -112,7 +109,7 @@ h6:after {
 /* #write h1 .content {
   display: inline-block;
   font-weight: bold;
-  color: #000;
+;
 } */
 
 #write h1 {
@@ -132,7 +129,7 @@ h6:after {
   background: linear-gradient(to right, #f7ce68, #fbabfe);
   background-size: 200% 100%;
   background-position: 0% 0%;
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.5s;
 }
 #write h2.md-heading a {
   text-decoration: underline;
@@ -142,7 +139,7 @@ h6:after {
 }
 #write h2:hover {
   background-position: -100% -100%;
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.5s;
 }
 
 /* 二级标题内容 */
@@ -170,7 +167,7 @@ h6:after {
 
 #write h3 span:hover {
   border-bottom: 2px solid #ffc000;
-  transition: all linear 0.1s;
+  transition: all linear 0.5s;
 }
 #write h4 {
   margin: 20px 0;
@@ -271,7 +268,6 @@ li.md-list-item {
   margin-bottom: 5px;
   line-height: 1.7rem;
   text-align: justify;
-  color: #000000;
   font-weight: 500;
 }
 
@@ -344,12 +340,10 @@ li.md-list-item {
 }
 
 #write blockquote p {
-  color: #000;
 }
 
 /* 链接 */
 #write a:not(.md-toc-inner) {
-  color: #000;
   border-bottom: 1px solid #ffb143;
   text-decoration: none;
   transform: all linear 0.1s;
@@ -359,7 +353,7 @@ li.md-list-item {
   /* font-weight: bolder; */
   color: #e46918;
   border-bottom: 1px solid #e46918;
-  transform: all linear 0.1s;
+  transform: all linear 0.5s;
 }
 
 #write p a:not(.md-toc-inner)::before {
@@ -377,7 +371,6 @@ li.md-list-item {
 }
 /* 加粗 */
 #write strong {
-  color: #000;
   font-weight: bold;
 }
 
@@ -387,12 +380,10 @@ li.md-list-item {
 /* 斜体 */
 #write em {
   font-style: italic;
-  color: #000;
 }
 /* 高亮 */
 #write mark {
   font-weight: bolder;
-  color: #000;
   background: #fbe598;
 }
 /* 加粗斜体 */
@@ -579,7 +570,6 @@ pre.CodeMirror-line {
 #write table tr th,
 #write table tr td {
   font-size: 14px;
-  color: #000;
 }
 
 #write .footnotes {
@@ -645,7 +635,6 @@ pre.CodeMirror-line {
   content: "目录";
   font-size: 20px;
   font-weight: 700;
-  color: #000;
 }
 .md-toc {
   padding: 20px 0;

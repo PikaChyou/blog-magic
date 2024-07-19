@@ -1,6 +1,7 @@
 .main {
   min-height: 100vh;
   background-color: var(--bg-c);
+  user-select: text;
 }
 
 .main-container {

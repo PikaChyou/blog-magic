@@ -7,13 +7,18 @@
         <p>
             {{ description }}
         </p>
+        <div>
+            <p>{{ archives.length }}</p>
+            <p>{{ Object.keys(categories).length }}</p>
+        </div>
         <slot>
-            <router-link to="/about">Home</router-link>
+            none
         </slot>
     </div>
 </template>
 
 <script setup>
+import { archives, categories } from '@/index'
 import settings from '@/settings.json'
 const author = settings.author
 const description = settings.description

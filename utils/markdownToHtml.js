@@ -12,30 +12,34 @@ marked.use({
   headerIds: false,
 });
 
-const parseMatter = async (str) => {
-  let date =
-    str.date.getFullYear() +
-    "-" +
-    (str.date.getMonth() + 1) +
-    "-" +
-    str.date.getDate();
-  return `
-    <h1>${str.title}</h1>
-    <p>发表于${date}</p>
-    <p>分类:${str.categories}</p>
-    <br/>`;
-};
-
 const parseMarkdown = (str) => {
-  return marked(
-    str
+  const codeBlockRegex = /(```[\s\S]*?```)|(`[\s\S]*?`)/g;
+  let lastIndex = 0;
+  let result = "";
+
+  str.replace(codeBlockRegex, (match, p1, p2, offset) => {
+    const nonCodeBlock = str.slice(lastIndex, offset);
+    result += nonCodeBlock
       .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
         return katex.renderToString(expression, { displayMode: true });
       })
       .replace(/\$([^\$]+)\$/g, (match, expression) => {
         return katex.renderToString(expression, { displayMode: false });
-      })
-  );
+      });
+    result += match;
+    lastIndex = offset + match.length;
+  });
+
+  const finalNonCodeBlock = str.slice(lastIndex);
+  result += finalNonCodeBlock
+    .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
+      return katex.renderToString(expression, { displayMode: true });
+    })
+    .replace(/\$([^\$]+)\$/g, (match, expression) => {
+      return katex.renderToString(expression, { displayMode: false });
+    });
+
+  return marked(result);
 };
 
 export default function (options) {

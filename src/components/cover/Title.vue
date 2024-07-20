@@ -15,7 +15,7 @@ import { computed } from 'vue'
 const route = useRoute()
 
 const title = computed(() => route.meta.info?.title || settings.title)
-const description = computed(() => route.meta.info?.date || settings.description)
+const description = computed(() => route.meta.info ? `${route.meta.info.date}` : settings.description)
 </script>
 
 <style>

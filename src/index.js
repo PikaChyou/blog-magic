@@ -47,6 +47,16 @@ const router = createRouter({
     },
     ...posts,
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.path === from.path && to.hash === from.hash) {
+      return;
+    }
+    if (savedPosition) {
+      return { ...savedPosition, behavior: "smooth" };
+    } else {
+      return { top: 0, behavior: "smooth" };
+    }
+  },
 });
 
 export default router;

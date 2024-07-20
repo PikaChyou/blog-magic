@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-.content:first-child {
+.btn-back {
   cursor: pointer;
 }
 

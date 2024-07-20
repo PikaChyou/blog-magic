@@ -99,7 +99,7 @@ function onDragging(event) {
 function stopDrag() {
     document.removeEventListener('mousemove', onDragging)
     document.removeEventListener('mouseup', stopDrag)
-    if (!dragging && Date.now() - startTime < 200) {
+    if (!dragging && Date.now() - startTime < 625) {
         scrollToTop()
     }
 }
@@ -127,4 +127,4 @@ function stopDrag() {
 .btn-toTop>svg path {
     stroke: var(--dark-c-2);
 }
-</style>@/components/cover/scroll.js@/components/scroll.js
+</style>

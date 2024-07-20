@@ -1,9 +1,9 @@
 <template>
     <div>
         <p>archives</p>
-        <p>发现{{ catalogue.length }}篇文章</p>
+        <p>发现{{ archives.length }}篇文章</p>
         <ul>
-            <li v-for="item in catalogue" :key="item.id">
+            <li v-for="item in archives" :key="item.id">
                 <router-link :to="item.path">{{ item.title }}</router-link>
             </li>
         </ul>
@@ -12,6 +12,5 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-defineProps(['catalogue'])
+import { archives } from '@/index';
 </script>

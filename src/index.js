@@ -23,9 +23,24 @@ const posts = data.map((item) => {
   return { path: item.path, component: item.component, meta: item.meta };
 });
 
-const catalogue = data.map(({ component, meta, ...rest }) => rest);
+export const archives = data
+  .map(({ component, meta, ...rest }) => rest)
+  .sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
 
-const router = createRouter({
+export const categories = data
+  .map(({ component, meta, ...rest }) => rest)
+  .reduce((pre, cur) => {
+    const category = cur.categories;
+    if (!pre[category]) {
+      pre[category] = [];
+    }
+    pre[category].push(cur);
+    return pre;
+  }, {});
+
+export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -35,7 +50,6 @@ const router = createRouter({
     {
       path: "/archive",
       component: Archive,
-      props: { catalogue: catalogue },
     },
     {
       path: "/categories",
@@ -58,5 +72,3 @@ const router = createRouter({
     }
   },
 });
-
-export default router;

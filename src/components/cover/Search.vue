@@ -55,8 +55,8 @@ a {
     color: var(--dark-c-2);
     text-decoration: none;
     font-size: 1.25rem;
-    border: 1px solid var(--dark-c-2);
-    border-radius: 1rem;
+    /* border: 1px solid var(--dark-c-2);
+    border-radius: 1rem; */
     transition: all 0.5s;
 }
 
@@ -75,6 +75,7 @@ a:hover {
     background-color: var(--bg-c-a7);
     backdrop-filter: blur(32px);
     flex-direction: column;
+    z-index: 1;
 }
 
 .search-close-btn {

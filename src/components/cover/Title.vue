@@ -14,8 +14,14 @@ import { computed } from 'vue'
 
 const route = useRoute()
 
+function parseDate(date) {
+    date = new Date(date)
+    return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
+}
+
 const title = computed(() => route.meta.info?.title || settings.title)
-const description = computed(() => route.meta.info ? `${route.meta.info.date}` : settings.description)
+const description = computed(() => route.meta.info ?
+    `${parseDate(route.meta.info.date)} ${(route.meta.info.words / 1000).toFixed(1)}k字` : settings.description)
 </script>
 
 <style>

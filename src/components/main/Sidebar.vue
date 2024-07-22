@@ -34,22 +34,12 @@ const description = settings.description
     background-size: cover;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* animation: rotate 10s linear infinite; */
+    transition: all 0.5s;
 }
 
-/* .avatar:hover {
-    animation-play-state: paused;
-} */
-
-/* @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-} */
+.avatar:hover {
+    transform: scale3d(1.15, 1.15, 1.15);
+}
 
 .sidebar {
     position: sticky;

@@ -26,6 +26,24 @@ import Main from '@/components/main/Main.vue'
 import Footer from '@/components/Footer.vue'
 import Title from '@/components/cover/Title.vue'
 import Search from '@/components/cover/Search.vue'
+
+import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { useScreenStore } from "@/store/screen"
+const screen = useScreenStore()
+const isWideScreen = ref(window.innerWidth >= 1200)
+function updateScreen() {
+  isWideScreen.value = window.innerWidth >= 1200
+}
+onMounted(() => {
+  window.addEventListener('resize', updateScreen)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreen)
+})
+watch(isWideScreen, (newValue) => {
+  screen.setScreen(newValue)
+})
+screen.setScreen(isWideScreen.value)
 </script>
 
 <style>

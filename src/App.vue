@@ -15,6 +15,8 @@
 
   <Footer />
 
+  <Search />
+
 </template>
 
 <script setup>
@@ -23,6 +25,7 @@ import Cover from '@/components/cover/Cover.vue'
 import Main from '@/components/main/Main.vue'
 import Footer from '@/components/Footer.vue'
 import Title from '@/components/cover/Title.vue'
+import Search from '@/components/cover/Search.vue'
 </script>
 
 <style>

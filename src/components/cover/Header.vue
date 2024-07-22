@@ -12,7 +12,8 @@
                 <path
                     d="M2.716 15.723c.278-.148.574-.268.882-.354C3.686 12.6 6.056 10.5 8.81 10.5c.172 0 .343.008.511.024A6.495 6.495 0 0 1 9 8.5a6.496 6.496 0 0 1 3.143-5.567C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12a9.97 9.97 0 0 0 .716 3.723M22 12c0 4.266-2.671 7.908-6.432 9.345a4.865 4.865 0 0 0 .932-2.874a4.907 4.907 0 0 0-1.457-3.487a6.496 6.496 0 0 0 6.024-3.127c.24-.396.933-.32.933.143" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                @click="() => { search.open() }">
                 <g fill="none" stroke="#fdfdfd" stroke-width="1.5">
                     <circle cx="11.5" cy="11.5" r="9.5" />
                     <path stroke-linecap="round" d="M18.5 18.5L22 22" />
@@ -23,6 +24,7 @@
 </template>
 
 <script setup>
+import { useSearchStore } from "@/store/search"
 const root = document.documentElement.querySelector("body")
 const switchMode = () => {
     if (root.classList.contains("dark-mode")) {
@@ -33,6 +35,7 @@ const switchMode = () => {
         root.classList.add("dark-mode")
     }
 }
+const search = useSearchStore()
 </script>
 
 <style>

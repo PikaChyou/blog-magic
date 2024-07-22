@@ -14,8 +14,8 @@ export const index = new FlexSearch.Document({
   cache: 100,
   document: {
     id: "id",
-    store: ["href", "title"],
-    index: ["title", "content"],
+    store: ["path", "title", "date"],
+    index: ["title", "content", "date"],
   },
   encode: splitText,
 });
@@ -28,9 +28,10 @@ const data = await Promise.all(
     const name = path.replace("/src/docs/", "").replace(".md", "");
     index.add({
       id: index_id++,
-      href: `/${name}`,
+      path: `/${name}`,
       title: module.matter.title,
       content: module.content,
+      date: module.matter.date,
     });
     return {
       path: `/${name}`,
@@ -41,10 +42,6 @@ const data = await Promise.all(
       ...module.matter,
     };
   })
-);
-
-console.log(
-  index.search("我们", { enrich: true })[0].result.map((item) => item.doc)
 );
 
 const posts = data.map((item) => {

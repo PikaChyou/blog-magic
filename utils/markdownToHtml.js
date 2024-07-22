@@ -1,6 +1,7 @@
 import { marked } from "marked";
 import katex from "katex";
 import matter from "gray-matter";
+import RemoveMD from "remove-markdown";
 
 import { countWords } from "./statistic";
 
@@ -50,11 +51,13 @@ export default function (options) {
       if (id.endsWith(".md")) {
         const { data, content } = matter(src);
 
+        const contentText = RemoveMD(content);
+
         const front_matter = JSON.stringify({
           title: data.title,
           date: data.date,
           categories: data.categories,
-          words: countWords(content),
+          words: countWords(contentText),
         });
 
         const main = JSON.stringify(await parseMarkdown(content));
@@ -73,7 +76,7 @@ export default function (options) {
 
                 export default article
                 export const matter = ${front_matter}
-                export const content = ${JSON.stringify(content)}`,
+                export const content = ${JSON.stringify(contentText)}`,
           map: null,
         };
       }

@@ -72,7 +72,8 @@ export default function (options) {
                 };
 
                 export default article
-                export const matter = ${front_matter}`,
+                export const matter = ${front_matter}
+                export const content = ${JSON.stringify(content)}`,
           map: null,
         };
       }

@@ -1,74 +1,29 @@
-import { marked } from "marked";
-import katex from "katex";
-import { codeToHtml } from "shiki";
+import markdownit from "markdown-it";
+import { fromHighlighter } from "@shikijs/markdown-it/core";
+import { createHighlighterCore } from "shiki/core";
+import getWasm from "shiki/wasm";
+import { katex } from "@mdit/plugin-katex";
 
-marked.use({
-  async: true,
-  pedantic: false,
-  gfm: true,
-  mangle: false,
-  headerIds: false,
+const highlighter = await createHighlighterCore({
+  themes: [
+    import("shiki/themes/one-light.mjs"),
+    import("shiki/themes/one-dark-pro.mjs"),
+  ],
+  langs: [
+    import("shiki/langs/javascript.mjs"),
+    import("shiki/langs/python.mjs"),
+  ],
+  loadWasm: getWasm,
 });
 
-// const parseCode = {
-//   codespan(src) {
-//     const match = src.match(/(```[\s\S]*?```)/);
-//     if (match) {
-//       return {
-//         type: "text",
-//         raw: match[0],
-//         text: match[1].trim(),
-//       };
-//     }
-//     return false;
-//   },
-// };
-
-const renderer = {
-  code(text) {
-    codeToHtml(text, {
-      lang: "javascript",
-      theme: "vitesse-dark",
-    }).then((res) => {
-      return `asd`;
-    });
-  },
-};
-
-marked.use({ renderer });
-
-console.log(await marked.parse("```js\nconsole.log('Hello, World!')\n```"));
-
-const parseKatex = (str) => {
-  const codeBlockRegex = /(```[\s\S]*?```)|(`[\s\S]*?`)/g;
-  let lastIndex = 0;
-  let result = "";
-
-  str.replace(codeBlockRegex, (match, p1, p2, offset) => {
-    const nonCodeBlock = str.slice(lastIndex, offset);
-    result += nonCodeBlock
-      .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
-        return katex.renderToString(expression, { displayMode: true });
-      })
-      .replace(/\$([^\$]+)\$/g, (match, expression) => {
-        return katex.renderToString(expression, { displayMode: false });
-      });
-    result += match;
-    lastIndex = offset + match.length;
-  });
-
-  const finalNonCodeBlock = str.slice(lastIndex);
-  result += finalNonCodeBlock
-    .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
-      return katex.renderToString(expression, { displayMode: true });
-    })
-    .replace(/\$([^\$]+)\$/g, (match, expression) => {
-      return katex.renderToString(expression, { displayMode: false });
-    });
-  return result;
-};
+export const md = markdownit();
+md.use(
+  fromHighlighter(highlighter, {
+    lang: "javascript",
+    theme: "one-light",
+  })
+).use(katex);
 
 export const parseMarkdown = (str) => {
-  const result = parseKatex(str);
-  return marked.parse(result);
+  return md.render(str);
 };

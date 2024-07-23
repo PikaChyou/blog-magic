@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import RemoveMD from "remove-markdown";
-import { parseMarkdown } from "./parser";
+import { md } from "./parser";
 import { countWords } from "./statistic";
 
 export default function (options) {
@@ -20,7 +20,7 @@ export default function (options) {
           words: countWords(contentText),
         });
 
-        const main = JSON.stringify(await parseMarkdown(content));
+        const main = JSON.stringify(md.render(content));
         return {
           code: `import {h, defineComponent} from "vue";
                 const article = defineComponent({

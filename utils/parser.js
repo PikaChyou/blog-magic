@@ -1,6 +1,6 @@
 import { marked } from "marked";
 import katex from "katex";
-import Prism from "prismjs";
+import { codeToHtml } from "shiki";
 
 marked.use({
   async: true,
@@ -24,13 +24,20 @@ marked.use({
 //   },
 // };
 
-// const rendererCode = {
-//   code(text) {
-//     return `123`;
-//   },
-// };
+const renderer = {
+  code(text) {
+    codeToHtml(text, {
+      lang: "javascript",
+      theme: "vitesse-dark",
+    }).then((res) => {
+      return `asd`;
+    });
+  },
+};
 
-// marked.use({ renderer: rendererCode });
+marked.use({ renderer });
+
+console.log(await marked.parse("```js\nconsole.log('Hello, World!')\n```"));
 
 const parseKatex = (str) => {
   const codeBlockRegex = /(```[\s\S]*?```)|(`[\s\S]*?`)/g;

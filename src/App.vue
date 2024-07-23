@@ -29,6 +29,7 @@ import Search from '@/components/cover/Search.vue'
 
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useScreenStore } from "@/store/screen"
+
 const screen = useScreenStore()
 const isWideScreen = ref(window.innerWidth >= 1200)
 function updateScreen() {
@@ -58,5 +59,5 @@ screen.setScreen(isWideScreen.value)
 }
 </style>
 
-<style src="@/phycat.css"></style>
+<style src="@/assets/theme.css"></style>
 <style src="katex/dist/katex.min.css"></style>@/components/cover/Cover.vue

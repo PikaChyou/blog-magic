@@ -1,47 +1,7 @@
-import { marked } from "marked";
-import katex from "katex";
 import matter from "gray-matter";
 import RemoveMD from "remove-markdown";
-
+import { parseMarkdown } from "./parser";
 import { countWords } from "./statistic";
-
-marked.use({
-  async: true,
-  pedantic: false,
-  gfm: true,
-  mangle: false,
-  headerIds: false,
-});
-
-const parseMarkdown = (str) => {
-  const codeBlockRegex = /(```[\s\S]*?```)|(`[\s\S]*?`)/g;
-  let lastIndex = 0;
-  let result = "";
-
-  str.replace(codeBlockRegex, (match, p1, p2, offset) => {
-    const nonCodeBlock = str.slice(lastIndex, offset);
-    result += nonCodeBlock
-      .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
-        return katex.renderToString(expression, { displayMode: true });
-      })
-      .replace(/\$([^\$]+)\$/g, (match, expression) => {
-        return katex.renderToString(expression, { displayMode: false });
-      });
-    result += match;
-    lastIndex = offset + match.length;
-  });
-
-  const finalNonCodeBlock = str.slice(lastIndex);
-  result += finalNonCodeBlock
-    .replace(/\$\$([^\$]+)\$\$/g, (match, expression) => {
-      return katex.renderToString(expression, { displayMode: true });
-    })
-    .replace(/\$([^\$]+)\$/g, (match, expression) => {
-      return katex.renderToString(expression, { displayMode: false });
-    });
-
-  return marked(result);
-};
 
 export default function (options) {
   return {

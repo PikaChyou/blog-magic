@@ -47,4 +47,8 @@ export const useSearchStore = defineStore("search", {
 });
 ```
 
+$$
+J(\mathcal{A},\mathcal{B}) = \frac{\left|\mathcal{A} \cap \mathcal{B}\right|}{\left| \mathcal{A} \cup \mathcal{B}\right|}.
+$$
+
 这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。`this is code` 这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。这里是一些随便填充的内容。

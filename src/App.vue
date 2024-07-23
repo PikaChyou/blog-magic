@@ -13,7 +13,7 @@
     </router-view>
   </Main>
 
-  <Footer />
+  <Footer></Footer>
 
   <Search />
 

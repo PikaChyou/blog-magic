@@ -2,7 +2,15 @@
     <Transition mode="out-in">
         <div :key="title" class="info">
             <p>{{ title }}</p>
-            <p>{{ description }}</p>
+            <p v-if="Object.prototype.toString.call(description) != '[object Object]'">{{ description }}</p>
+            <p v-else>
+                <font-awesome-icon :icon="['fas', 'calendar-days']" /> 发表于 {{ description.date }}
+                &nbsp;
+                <font-awesome-icon :icon="['fas', 'folder-open']" /> 分类 {{ description.categories
+            ? description.categories : '默认' }}
+                &nbsp;
+                <font-awesome-icon :icon="['fas', 'pen-to-square']" /> 共计 {{ description.words }}
+            </p>
         </div>
     </Transition>
 </template>
@@ -20,8 +28,11 @@ function parseDate(date) {
 }
 
 const title = computed(() => route.meta.info?.title || settings.title)
-const description = computed(() => route.meta.info ?
-    `${parseDate(route.meta.info.date)} ${(route.meta.info.words / 1000).toFixed(1)}k字` : settings.description)
+const description = computed(() => route.meta.info ? {
+    ...route.meta.info,
+    date: parseDate(route.meta.info.date),
+    words: (route.meta.info.words / 1000).toFixed(1) + ' k字'
+} : settings.description)
 </script>
 
 <style>
@@ -37,11 +48,22 @@ const description = computed(() => route.meta.info ?
     z-index: -1;
 }
 
-.info>:nth-child(1) {
+.info p:first-child {
     font-size: 3.125rem;
 }
 
-.info>:nth-child(2) {
-    font-size: 24px;
+.info p:not(:first-child) {
+    font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .info p:first-child {
+        font-size: 1.5rem;
+    }
+
+    .info p:not(:first-child) {
+        font-size: 0.75rem;
+    }
+
 }
 </style>

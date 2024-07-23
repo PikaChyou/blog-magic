@@ -54,16 +54,14 @@ export const archives = data
     return new Date(b.date) - new Date(a.date);
   });
 
-export const categories = data
-  .map(({ component, meta, ...rest }) => rest)
-  .reduce((pre, cur) => {
-    const category = cur.categories;
-    if (!pre[category]) {
-      pre[category] = [];
-    }
-    pre[category].push(cur);
-    return pre;
-  }, {});
+export const categories = archives.reduce((pre, cur) => {
+  const category = cur.categories;
+  if (!pre[category]) {
+    pre[category] = [];
+  }
+  pre[category].push(cur);
+  return pre;
+}, {});
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

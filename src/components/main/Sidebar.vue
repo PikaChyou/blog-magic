@@ -7,9 +7,15 @@
         <p>
             {{ description }}
         </p>
-        <div>
-            <p>{{ archives.length }}</p>
-            <p>{{ Object.keys(categories).length }}</p>
+        <div class="sidebar-info flex-c">
+            <div>
+                <p>{{ archives.length }}</p>
+                <p>文章</p>
+            </div>
+            <div>
+                <p>{{ Object.keys(categories).length }}</p>
+                <p>分类</p>
+            </div>
         </div>
         <slot>
             none
@@ -51,25 +57,63 @@ const description = settings.description
     align-items: center;
 
     a {
-        width: 10.5rem;
-        height: 3.125rem;
+        width: 11.25rem;
+        height: 3.25rem;
         margin: 0.6rem;
+        color: var(--dark-c-2);
+        font-size: 1.25rem;
         text-decoration: none;
-        color: #fff;
-        background-color: #333;
+        border: 1px solid var(--dark-c-2);
         border-radius: 1.25rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.125s;
     }
 
     a:not(#is-currrent):hover {
-        background-color: #666;
+        color: var(--bg-c);
+        background-color: var(--text-color);
     }
 
     #is-current {
-        background-color: #666;
+        color: var(--bg-c);
+        background-color: var(--text-color);
     }
 
+}
+
+.sidebar-info {
+    width: 80%;
+    margin: 0.5rem 0;
+}
+
+.sidebar-info div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    line-height: 1.5;
+
+    :nth-child(1) {
+        font-size: 1.5rem;
+        font-weight: 1000;
+    }
+
+    :nth-child(2) {
+        font-size: 1rem;
+    }
+
+}
+
+.sidebar-info div:not(:last-child)::after {
+    content: "";
+    width: 0.8px;
+    height: 80%;
+    background-color: #ccc;
+    position: absolute;
+    right: 0;
+    top: 10%;
 }
 </style>

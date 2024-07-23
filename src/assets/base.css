@@ -32,8 +32,11 @@ body::-webkit-scrollbar {
   --dark-c-3: #999;
 
   --moon-c: #ffffff80;
+  --code-header-c: #eff2f3;
+  --code-bg-c: #f7f7f7;
 
   color: #000000b3;
+  --text-color: #000000b3;
 }
 
 .dark-mode {
@@ -47,18 +50,15 @@ body::-webkit-scrollbar {
   --dark-c-3: #f0f0f0;
 
   --moon-c: #ffffff;
+  --code-header-c: #444;
+  --code-bg-c: #363636;
 
   color: #ffffffb3;
+  --text-color: #ffffffb3;
 }
 
 .flex-c {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer {
-  min-height: 10vh;
-  text-align: center;
-  background-color: var(--bg-c);
 }

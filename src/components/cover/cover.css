@@ -70,7 +70,7 @@
 
 @media screen and (max-width: 1200px) {
   .cover {
-    height: 50vh;
+    height: 30vh;
   }
 
   .cover-title {
@@ -78,6 +78,6 @@
   }
 
   .wave-container {
-    height: 7.5vh;
+    height: 5vh;
   }
 }

@@ -1,0 +1,21 @@
+::marker {
+  /* font-weight: bold; */
+  color: #626161;
+}
+
+/** 表格内的单元格*/
+#write table tr th,
+#write table tr td {
+  font-size: 14px;
+}
+
+#write table.md-table {
+  overflow: hidden;
+}
+#write table thead {
+  border-top: 1px solid #dedddd;
+  border-bottom: 1px solid #dedddd;
+}
+#write table tbody {
+  border-bottom: 1px solid #dedddd;
+}

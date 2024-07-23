@@ -1,76 +1,17 @@
-:root {
-  --h1-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(235, 131, 131, 0.4)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.8 29.714v0c-1.371 0-2.514-1.143-2.514-2.514v0c0-1.371 1.143-2.514 2.514-2.514v0c1.371 0 2.514 1.143 2.514 2.514v0c0.114 1.371-1.029 2.514-2.514 2.514z'/></svg>")
-    no-repeat center;
-  --h2-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(174, 154, 203, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
-    no-repeat center;
-  --h3-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(125, 181, 205, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
-    no-repeat center;
-  --h4-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(113, 167, 150, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>")
-    no-repeat center;
-  --h5-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286zM4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
-    no-repeat center;
-  --h6-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(221, 163, 106, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 16c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>")
-    no-repeat center;
-}
-
-/* 字体引入：鸿蒙字体 */
-
-/* @font-face {
-  font-family: "HarmonyOS_Sans_SC";
-  font-weight: normal;
-  font-style: normal;
-  src: url("phycat/HarmonyOS_Sans_SC_Regular.woff");
-}
-
-@font-face {
-  font-family: "HarmonyOS_Sans_SC";
-  font-weight: bold;
-  font-style: normal;
-  src: url("phycat/HarmonyOS_Sans_SC_Bold.woff");
-} */
-
-html {
-  font-size: 16px;
-  font-family: "HarmonyOS_Sans_SC";
-}
-
-/* 打印页面设置 */
-
-@media print {
-  * {
-    -webkit-print-color-adjust: exact; /*确保打印颜色一致*/
-    print-color-adjust: exact;
-  }
-  body {
-    width: 21cm; /* 设置页面宽度为A4宽度 */
-    height: 29.7cm; /* 设置页面高度为A4高度 */
-    margin: 1cm; /* 设置页面边距 */
-  }
-  p {
-    line-height: 1.5rem; /*设置打印内容的行高*/
-  }
-}
-
-/* 软件内部Markdown样式 */
 #write {
-  max-width: 950px;
   margin: 0 auto;
   padding: 15px;
   line-height: 2.25;
   letter-spacing: 1.1px;
-  word-break: break-word;
-  word-wrap: break-word;
   text-align: left;
 }
 
 #write p {
   margin: 10px 10px;
-  /* font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
-    "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
-
   font-size: 1rem;
-  word-spacing: 2px;
+  word-spacing: 0.125rem;
 }
+
 #write h3:after,
 h4:after,
 h5:after,
@@ -97,27 +38,7 @@ h6:after {
   background: var(--h6-r-graphic);
 }
 
-/* 一级标题 */
-#write h1:after {
-  font-size: 1.8rem;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: none;
-}
-
-/* 一级标题内容 */
-/* #write h1 .content {
-  display: inline-block;
-  font-weight: bold;
-;
-} */
-
 #write h1 {
-  text-align: center;
-}
-
-/* 二级标题 */
-#write h2 {
   font-size: 1.5rem;
   line-height: 1.6;
   width: fit-content;
@@ -131,21 +52,12 @@ h6:after {
   background-position: 0% 0%;
   transition: all ease-in-out 0.5s;
 }
-#write h2:hover {
+#write h1:hover {
   background-position: -100% -100%;
   transition: all ease-in-out 0.5s;
 }
 
-/* 二级标题内容 */
-#write h2 .content {
-}
-
-/* 二级标题修饰 请参考有实例的主题 */
-#write h2:after {
-}
-
-/* 三级标题 */
-#write h3 {
+#write h2 {
   width: fit-content;
   margin: 20px 0;
   font-size: 1.3rem;
@@ -153,23 +65,17 @@ h6:after {
   padding-left: 10px;
   border-left: 5px solid #ffc000;
 }
-
-/* 三级标题内容 */
-#write h3 span {
+#write h2 span {
   border-bottom: 2px hidden #ffc000;
 }
 
-#write h3 span:hover {
-  border-bottom: 2px solid #ffc000;
-  transition: all linear 0.5s;
-}
-#write h4 {
+#write h3 {
   margin: 20px 0;
   font-size: 1.15rem;
   text-align: left;
 }
 
-#write h4::before {
+#write h3::before {
   content: "";
   margin-right: 7px;
   display: inline-block;
@@ -181,13 +87,13 @@ h6:after {
   vertical-align: inherit;
 }
 
-#write h5 {
+#write h4 {
   margin: 23px 0;
   font-size: 1.1rem;
   text-align: left;
 }
 
-#write h5::before {
+#write h4::before {
   content: "";
   margin-right: 7px;
   display: inline-block;
@@ -199,13 +105,13 @@ h6:after {
   vertical-align: inherit;
 }
 
-#write h6 {
+#write h5 {
   margin: 23px 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   text-align: left;
 }
 
-#write h6::before {
+#write h5::before {
   content: "-";
   color: #ffc840;
   margin-right: 7px;
@@ -213,14 +119,138 @@ h6:after {
   vertical-align: inherit;
 }
 
-/* 列表 */
-::marker {
-  /* font-weight: bold; */
-  color: #626161;
+/* 引用 */
+#write blockquote {
+  margin-left: 12px;
+  padding: 12px;
+  border: 1px solid #d7d9e2;
+  border-left-color: #ffd43e;
+  border-left-width: 4px;
+  border-radius: 4px;
+  line-height: 26px;
 }
 
-li.md-list-item {
-  margin: 0.4rem 0;
+/* 链接 */
+#write a {
+  border-bottom: 1px solid #ffb143;
+  text-decoration: none;
+  transform: all linear 0.1s;
+  color: currentColor;
+}
+
+#write a:hover {
+  /* font-weight: bolder; */
+  color: #e46918;
+  border-bottom: 1px solid #e46918;
+  transform: all linear 0.5s;
+}
+
+#write p a::before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath  d='M477.934459 330.486594A50.844091 50.844091 0 0 1 406.752731 258.796425L512 152.532274a254.220457 254.220457 0 0 1 359.467726 359.467726L762.66137 618.772592a50.844091 50.844091 0 1 1-71.690168-71.690169l106.772591-106.772592a152.532274 152.532274 0 0 0-215.578947-215.578947z m70.164846 361.501489A50.844091 50.844091 0 1 1 619.789474 762.66137l-107.281033 107.281033A254.220457 254.220457 0 0 1 152.532274 512L259.813307 406.752731a50.844091 50.844091 0 1 1 72.19861 69.656405l-107.789474 107.281033a152.532274 152.532274 0 0 0 215.578947 215.578947z m-126.601788-16.77855a50.844091 50.844091 0 1 1-71.690168-71.690169l251.678252-251.678252a50.844091 50.844091 0 0 1 71.690169 71.690169z'/%3E%3C/svg%3E");
+  color: #f68800;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+}
+
+#write sup a::before {
+  content: none;
+}
+
+/* 加粗 */
+#write strong {
+  font-weight: bold;
+}
+
+/* 斜体 */
+#write em {
+  font-style: italic;
+}
+
+/* 高亮 */
+#write mark {
+  font-weight: bolder;
+  background: #fbe598;
+}
+
+/* 加粗斜体 */
+#write em strong {
+  color: #595959;
+}
+
+/* 删除线 */
+#write del {
+  color: #595959;
+}
+
+/* 分隔线*/
+#write hr {
+  height: 1px;
+  padding: 0;
+  border: none;
+  border-top: 2px solid #ffc000;
+}
+
+/* 图片*/
+#write img {
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+/* 图片描述文字 */
+#write figcaption {
+  display: block;
+  font-size: 13px;
+  color: #595959;
+}
+
+/* 行内代码 */
+#write p code {
+  padding: 0px 3px 0px 7px;
+  color: rgb(220, 53, 69);
+  background: #ffe7e7;
+  border-radius: 3px;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  letter-spacing: 0.5px;
+}
+
+#write li code {
+  color: #595959;
+}
+
+pre {
+  position: relative;
+  background-color: var(--code-bg-c);
+  border-radius: 0.25rem;
+  padding: 3rem 0.5rem 1rem 1rem;
+  margin: 1rem;
+  line-height: 2;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 5px 0 rgb(150, 150, 150, 0.25);
+  overflow: auto;
+}
+
+pre::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
+  height: 2.5rem;
+  width: 100%;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-color: var(--code-header-c);
+  border-radius: 0.75rem 0.75rem 0 0;
+  background-position: 1rem 0.75rem;
+}
+
+code {
+  font-family: consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
 }
 
 #write ul,
@@ -270,159 +300,5 @@ li.md-list-item {
   height: calc(100% - 34px);
   top: 34px;
   position: absolute;
-  border-left: 0.5px solid #d6d6d6;
   left: -14px;
-}
-
-#write input[type="checkbox"] {
-  position: absolute;
-  top: 7px;
-  left: -3px;
-}
-
-/* 引用 */
-
-#write blockquote {
-  margin-left: 12px;
-  padding: 12px;
-  border: 1px solid #d7d9e2;
-  border-left-color: #ffd43e;
-  border-left-width: 4px;
-  border-radius: 4px;
-  line-height: 26px;
-}
-
-/* 链接 */
-#write a:not(.md-toc-inner) {
-  border-bottom: 1px solid #ffb143;
-  text-decoration: none;
-  transform: all linear 0.1s;
-}
-
-#write a:hover:not(.md-toc-inner) {
-  /* font-weight: bolder; */
-  color: #e46918;
-  border-bottom: 1px solid #e46918;
-  transform: all linear 0.5s;
-}
-
-#write p a:not(.md-toc-inner)::before {
-  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath  d='M477.934459 330.486594A50.844091 50.844091 0 0 1 406.752731 258.796425L512 152.532274a254.220457 254.220457 0 0 1 359.467726 359.467726L762.66137 618.772592a50.844091 50.844091 0 1 1-71.690168-71.690169l106.772591-106.772592a152.532274 152.532274 0 0 0-215.578947-215.578947z m70.164846 361.501489A50.844091 50.844091 0 1 1 619.789474 762.66137l-107.281033 107.281033A254.220457 254.220457 0 0 1 152.532274 512L259.813307 406.752731a50.844091 50.844091 0 1 1 72.19861 69.656405l-107.789474 107.281033a152.532274 152.532274 0 0 0 215.578947 215.578947z m-126.601788-16.77855a50.844091 50.844091 0 1 1-71.690168-71.690169l251.678252-251.678252a50.844091 50.844091 0 0 1 71.690169 71.690169z'/%3E%3C/svg%3E");
-  color: #f68800;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.2em;
-  vertical-align: sub;
-}
-
-#write sup a::before {
-  content: none;
-}
-/* 加粗 */
-#write strong {
-  font-weight: bold;
-}
-
-/* 斜体 */
-#write em {
-  font-style: italic;
-}
-/* 高亮 */
-#write mark {
-  font-weight: bolder;
-  background: #fbe598;
-}
-/* 加粗斜体 */
-#write em strong {
-  color: #595959;
-}
-
-/* 删除线 */
-#write del {
-  color: #595959;
-}
-
-/* 分隔线*/
-#write hr {
-  height: 1px;
-  padding: 0;
-  border: none;
-  border-top: 2px solid #ffc000;
-}
-
-/* 图片*/
-#write img {
-  border-radius: 6px;
-  display: block;
-  margin: 20px auto;
-  object-fit: contain;
-}
-
-/* 图片描述文字 */
-#write figcaption {
-  display: block;
-  font-size: 13px;
-  color: #595959;
-}
-
-/* 行内代码 */
-#write p code {
-  padding: 0px 3px 0px 7px;
-  color: rgb(220, 53, 69);
-  background: #ffe7e7;
-  border-radius: 3px;
-  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
-  letter-spacing: 0.5px;
-}
-#write li code {
-  color: #595959;
-}
-
-pre {
-  background-color: #666;
-  color: #fdfdfd;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-}
-
-pre.CodeMirror-line {
-  padding: 0 1.2rem;
-}
-
-pre::before {
-  content: "";
-  display: block;
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
-  height: 30px;
-  width: 100%;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-color: #f8f8f8;
-  border-radius: 5px 5px 0 0;
-  background-position: 6px 10px;
-}
-
-/** 表格内的单元格*/
-#write table tr th,
-#write table tr td {
-  font-size: 14px;
-}
-
-#write .footnotes {
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 6px;
-  border: 0.8px solid #ffc000;
-}
-
-#write table.md-table {
-  overflow: hidden;
-}
-#write table thead {
-  border-top: 1px solid #dedddd;
-  border-bottom: 1px solid #dedddd;
-}
-#write table tbody {
-  border-bottom: 1px solid #dedddd;
 }

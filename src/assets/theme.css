@@ -1,3 +1,5 @@
+@import url("code_blcok.css");
+
 #write {
   margin: 0 auto;
   padding: 15px;
@@ -219,38 +221,6 @@ h6:after {
 
 #write li code {
   color: #595959;
-}
-
-pre {
-  position: relative;
-  background-color: var(--code-bg-c);
-  border-radius: 0.25rem;
-  padding: 3rem 0.5rem 1rem 1rem;
-  margin: 1rem;
-  line-height: 2;
-  border-radius: 0.75rem;
-  box-shadow: 0 0 5px 0 rgb(150, 150, 150, 0.25);
-  overflow: auto;
-}
-
-pre::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
-  height: 2.5rem;
-  width: 100%;
-  background-size: 3rem;
-  background-repeat: no-repeat;
-  background-color: var(--code-header-c);
-  border-radius: 0.75rem 0.75rem 0 0;
-  background-position: 1rem 0.75rem;
-}
-
-code {
-  font-family: consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
 }
 
 #write ul,

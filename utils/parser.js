@@ -23,6 +23,34 @@ const highlighter = await createHighlighterCore({
 });
 
 export const md = markdownit();
+
+const fence = md.renderer.rules.fence;
+md.renderer.rules.fence = (...args) => {
+  const rawCode = fence(...args);
+  const code = rawCode.slice(
+    rawCode.indexOf("<span"),
+    rawCode.indexOf("</code>")
+  );
+
+  const lines = code.split("\n");
+
+  const innerCode = [...Array(lines.length)]
+    .map((_, index) => {
+      const i = lines[index].indexOf(">");
+      return (
+        lines[index].slice(0, i + 1) +
+        `<div class="line-number"> ${index} </div>` +
+        lines[index].slice(i + 1) +
+        "\n"
+      );
+    })
+    .join("");
+
+  const finalCode = rawCode.replace(code, innerCode);
+
+  return `<div class="code-block"><div class="code-block-header"></div>${finalCode}</div>`;
+};
+
 md.use(
   fromHighlighter(highlighter, {
     theme: "one-light",

@@ -26,7 +26,7 @@ import Main from '@/components/main/Main.vue'
 import Footer from '@/components/Footer.vue'
 import Title from '@/components/cover/Title.vue'
 import Search from '@/components/cover/Search.vue'
-
+import ClipboardJS from 'clipboard';
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useScreenStore } from "@/store/screen"
 
@@ -45,6 +45,34 @@ watch(isWideScreen, (newValue) => {
   screen.setScreen(newValue)
 })
 screen.setScreen(isWideScreen.value)
+
+// 复制代码块内容
+const clipboard = ref(null);
+onMounted(() => {
+  clipboard.value = new ClipboardJS('.copy-btn', {
+    text: (trigger) => {
+      return decodeURIComponent(trigger.getAttribute('data-clipboard-text'));
+    }
+  });
+
+  clipboard.value.on('success', (e) => {
+    const button = e.trigger;
+    button.innerText = 'success';
+    button.disabled = true;
+    setTimeout(() => {
+      button.innerText = 'copy';
+      button.disabled = false;
+    }, 2500);
+  });
+
+  clipboard.value.on('error', (e) => {
+    const button = e.trigger;
+    button.innerText = 'failed';
+    setTimeout(() => {
+      button.innerText = 'copy';
+    }, 2500);
+  });
+})
 </script>
 
 <style>

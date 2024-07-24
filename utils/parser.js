@@ -47,8 +47,11 @@ md.renderer.rules.fence = (...args) => {
     .join("");
 
   const finalCode = rawCode.replace(code, innerCode);
+  const pureCode = encodeURIComponent(
+    code.replace(/<\/?[^>]+(>|$)/g, "").trim()
+  );
 
-  return `<div class="code-block"><div class="code-block-header"></div>${finalCode}</div>`;
+  return `<div class="code-block"><div class="code-block-header"><button class="copy-btn" data-clipboard-text="${pureCode}">copy</button></div>${finalCode}</div>`;
 };
 
 md.use(

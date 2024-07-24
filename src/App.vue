@@ -60,4 +60,4 @@ screen.setScreen(isWideScreen.value)
 </style>
 
 <style src="@/assets/theme.css"></style>
-<style src="katex/dist/katex.min.css"></style>@/components/cover/Cover.vue
+<style src="../node_modules/@mdit/plugin-katex/node_modules/katex/dist/katex.min.css"></style>

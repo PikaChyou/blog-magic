@@ -2,7 +2,13 @@ import markdownit from "markdown-it";
 import { fromHighlighter } from "@shikijs/markdown-it/core";
 import { createHighlighterCore } from "shiki/core";
 import getWasm from "shiki/wasm";
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationFocus,
+} from "@shikijs/transformers";
 import { katex } from "@mdit/plugin-katex";
+import { imgLazyload } from "@mdit/plugin-img-lazyload";
 
 const highlighter = await createHighlighterCore({
   themes: [
@@ -19,11 +25,13 @@ const highlighter = await createHighlighterCore({
 export const md = markdownit();
 md.use(
   fromHighlighter(highlighter, {
-    lang: "javascript",
     theme: "one-light",
+    transformers: [
+      transformerNotationDiff(),
+      transformerNotationHighlight(),
+      transformerNotationFocus(),
+    ],
   })
-).use(katex);
-
-export const parseMarkdown = (str) => {
-  return md.render(str);
-};
+)
+  .use(katex)
+  .use(imgLazyload);

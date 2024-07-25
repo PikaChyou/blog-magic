@@ -1,1 +1,1 @@
-A blog-SSG based on Vuejs
+A blog based on Vuejs

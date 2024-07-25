@@ -5,7 +5,8 @@
             <Menu />
         </Header>
 
-        <img src="/hoshino.jpg" alt="cover" class="cover-bg cover-blur">
+
+        <img src="/cover.jpg" alt="cover" :class="{ 'cover-bg': true, 'cover-blur': settings.cover_blur }" />
 
         <slot></slot>
 
@@ -32,6 +33,7 @@
 import Header from '@/components/cover/Header.vue'
 import Menu from '@/components/Menu.vue'
 import '@/components/cover/cover.css'
+import settings from '@/settings.json'
 </script>
 
 <style>

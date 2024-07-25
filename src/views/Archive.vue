@@ -111,10 +111,10 @@ p::after {
     background: var(--dark-c-3);
     content: " ";
     display: block;
-    height: 2.7rem;
+    height: 2.6rem;
     position: absolute;
     left: -1.65rem;
-    top: 2.5rem;
+    top: 2.6rem;
     width: 0.125rem;
 }
 </style>

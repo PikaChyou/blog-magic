@@ -15,7 +15,7 @@ export const index = new FlexSearch.Document({
   document: {
     id: "id",
     store: ["path", "title", "date"],
-    index: ["title", "content", "date"],
+    index: ["title", "content", "categories", "date"],
   },
   encode: splitText,
 });
@@ -32,6 +32,7 @@ const data = await Promise.all(
       title: module.matter.title,
       content: module.content,
       date: module.matter.date,
+      categories: module.matter.categories,
     });
     return {
       path: `/${name}`,

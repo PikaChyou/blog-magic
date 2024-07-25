@@ -29,7 +29,9 @@ const result = computed(() => {
     if (searchInput.value) {
         const searchResult = index.search(searchInput.value, { limit: 5, enrich: true })[0]
         if (!searchResult) return []
-        else return searchResult.result.map((item) => {
+        else return searchResult.result.sort((a, b) => {
+            return new Date(b.doc.date) - new Date(a.doc.date);
+        }).map((item) => {
             return {
                 id: item.id,
                 ...item.doc

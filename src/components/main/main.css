@@ -27,10 +27,6 @@
   overflow: hidden;
 }
 
-.btn-back {
-  cursor: pointer;
-}
-
 .archive {
   li {
     list-style-type: none;

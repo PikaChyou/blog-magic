@@ -9,6 +9,7 @@ import {
   faCalendarDays,
   faPenToSquare,
   faFolderOpen,
+  faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -24,7 +25,7 @@ if (settings.dark_mode) {
 const pinia = createPinia();
 const app = createApp(App);
 
-library.add(faCalendarDays, faPenToSquare, faFolderOpen);
+library.add(faCalendarDays, faPenToSquare, faFolderOpen, faBackward);
 app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.use(router);

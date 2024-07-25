@@ -12,7 +12,7 @@
 }
 
 .cover-blur {
-  filter: brightness(0.8) blur(6px);
+  filter: brightness(0.8) blur(5px);
   transform: scale3d(1.05, 1.05, 1);
 }
 

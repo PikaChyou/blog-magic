@@ -23,5 +23,6 @@
   ],
 
   "to_top": true,
-  "dark_mode": false
+  "dark_mode": false,
+  "cover_blur": true
 }

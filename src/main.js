@@ -28,7 +28,13 @@ const app = createApp(App);
 library.add(faCalendarDays, faPenToSquare, faFolderOpen, faBackward);
 app.component("font-awesome-icon", FontAwesomeIcon);
 
-app.use(router);
-app.use(pinia);
+const _mount = async () => {
+  const __router = await router;
+  app.use(__router);
+  app.use(pinia);
+  app.mount("#app");
+};
 
-app.mount("#app");
+_mount();
+
+// app.mount("#app");

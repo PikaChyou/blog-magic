@@ -55,15 +55,15 @@ md.renderer.rules.fence = (...args) => {
   return `<div class="code-block"><div class="code-block-header"><button class="copy-btn" data-clipboard-text="${pureCode}">copy</button></div>${finalCode}</div>`;
 };
 
-md.use(
-  fromHighlighter(highlighter, {
-    theme: "one-light",
-    transformers: [
-      transformerNotationDiff(),
-      transformerNotationHighlight(),
-      transformerNotationFocus(),
-    ],
-  })
-)
-  .use(katex)
-  .use(imgLazyload);
+md.use(katex)
+  .use(imgLazyload)
+  .use(
+    fromHighlighter(highlighter, {
+      theme: "one-light",
+      transformers: [
+        transformerNotationDiff(),
+        transformerNotationHighlight(),
+        transformerNotationFocus(),
+      ],
+    })
+  );
